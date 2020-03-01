@@ -1,12 +1,11 @@
 language: python
 
-#which versions of python to test against
 python:
   - "2.7"
   - "3.7"
 
-# command to install dependencies
 install:
+  - pip install -r requirements.txt
 
-#script: 
-#  - python -m unittest discover -v ./ci_play/ # command to run unit test
+script: 
+  - pytest
